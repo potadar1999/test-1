@@ -10,4 +10,41 @@
  
 </body>
 </html>
-<script src="/main.js"></script>
+<script>
+    let amar={
+    propestion:"singer",
+    lives:"Goa",
+
+    work:function(){
+    console.log(this.propestion)
+},
+}
+
+let akbar={
+     propestion:"chef",
+    lives:"Mumbai",
+
+    work:function(){
+    console.log(this.propestion)
+},
+}
+
+let anthony={
+     propestion:"Magician",
+    lives:"Kashmir",
+
+    work:function(){
+    console.log(this.propestion)
+},
+}
+
+
+
+
+amar.work.call(akbar)
+amar.work.call(anthony)
+akbar.work.call(amar)
+akbar.work.call(anthony)
+anthony.work.call(amar)
+anthony.work.call(akbar)
+</script>
