@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="form">
+        <input type="text" id="ProductName" placeholder="Product Name">
+        <input type="text" id="Category" placeholder="Category">
+        <input type="text" id="Image" placeholder="Image">
+        <input type="number" id="price" placeholder="Price">
+        <select name="" id="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+
+        </select>
+        <input type="submit" id="add" >
+    </form>
+
+
+    <style>
+     #form{
+         width: 80%;
+         margin: auto;
+     }
+     
+    </style>
+  
+</body>
+</html>
+
+<script>
+
+    
+
+    document.querySelector("#form").addEventListener("submit",fun)
+
+    var Dress=JSON.parse(localStorage.getItem("data"))||[]
+
+    function fun(){
+        event.preventDefault();
+
+        var data={
+            Name:form.ProductName.value,
+                Category:form.Category.value,
+                Image:form.Image.value,
+                Price:form.price.value,
+
+        }
+        Dress.push(data)
+        localStorage.setItem("MY",JSON.stringify(data))
+    }
+
+ 
+    
+   
+    
+</script>
+
+
